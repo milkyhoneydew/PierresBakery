@@ -1,17 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
-using System.Collections.Generic;
-using System;
 
 namespace PierresBakery.Tests
 {
   [TestClass]
   public class BakeryTests
   {
-    public void BreadCost_OneLoaf_Two()
+    [TestMethod]
+    public void BreadCost_OneLoaf_Five()
     {
       Bread newBread = new Bread();
-      Assert.AreEqual(5, newBread.BreadCost());
+      Assert.AreEqual(5, newBread.BreadCost(1));
     }
   }
 }
