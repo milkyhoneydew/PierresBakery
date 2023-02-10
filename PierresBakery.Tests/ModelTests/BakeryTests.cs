@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     public void BreadCost_TwoLoaves_Ten()
     {
       Bread newBread = new Bread();
-      Assert.AreEqual(10, newBread.BreadCost());
+      Assert.AreEqual(10, newBread.BreadCost(2));
     }
   }
 }
