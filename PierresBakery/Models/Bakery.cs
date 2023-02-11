@@ -16,7 +16,8 @@ namespace PierresBakery.Models
       else
       { 
         int freeLoaves = amount / 3;
-        cost = freeLoaves * 10;
+        int extraLoaves = amount - (freeLoaves * 3);
+        cost = (freeLoaves * 10) + (extraLoaves * 5);
       }
       return cost;
     }
