@@ -52,7 +52,7 @@ namespace PierresBakery.Tests
     public void PastryCost_OnePastry_Two()
     {
       Pastry newPastry = new Pastry();
-      Assert.AreEqual(2, newPastry.PastryCost());
+      Assert.AreEqual(2, newPastry.PastryCost(1));
     }
   }
 }
