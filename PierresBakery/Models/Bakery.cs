@@ -22,4 +22,23 @@ namespace PierresBakery.Models
       return cost;
     }
   }
+
+  public class Pastry
+  {
+    public int PastryCost (int amount)
+    {
+      int cost = 0;
+      if (amount <= 2) 
+      {
+      cost = amount * 2;
+      }
+      else
+      { 
+        int freePastries = amount / 4;
+        int extraPastries = amount - (freePastries * 4);
+        cost = (freePastries * 6) + (extraPastries * 2);
+      }
+      return cost;
+    }
+  }
 }
