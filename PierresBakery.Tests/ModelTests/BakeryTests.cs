@@ -54,5 +54,12 @@ namespace PierresBakery.Tests
       Pastry newPastry = new Pastry();
       Assert.AreEqual(2, newPastry.PastryCost(1));
     }
+
+    [TestMethod]
+    public void PastryCost_TwoPastries_Four()
+    {
+      Pastry newPastry = new Pastry();
+      Assert.AreEqual(4, newPastry.PastryCost());
+    }
   }
 }
