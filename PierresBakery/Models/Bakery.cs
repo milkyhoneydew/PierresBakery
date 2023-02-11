@@ -9,13 +9,14 @@ namespace PierresBakery.Models
     public int BreadCost (int amount)
     {
       int cost = 0;
-      if ((amount > 2) && (amount % 2 == 1)) 
+      if (amount <= 2) 
       {
-      cost = (amount - 1) * 5;
+      cost = amount * 5;
       }
       else
-      {
-        cost = amount * 5;
+      { 
+        int freeLoaves = amount / 3;
+        cost = freeLoaves * 10;
       }
       return cost;
     }
