@@ -28,7 +28,7 @@ namespace PierresBakery.Models
     public int PastryCost (int amount)
     {
       int cost = 0;
-      if (amount <= 2) 
+      if (amount <= 3) 
       {
       cost = amount * 2;
       }
