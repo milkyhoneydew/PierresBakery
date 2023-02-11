@@ -6,26 +6,40 @@ namespace PierresBakery.Models
 
   public class Bread
   {
-    public int BreadCost (int amount)
+    public int Cost { get; set; }
+
+    public int BreadCost(int amount, int cost)
     {
-      int cost = 0;
+      Cost = cost;
+
+      // int cost = 0;
       if (amount <= 2) 
       {
-      cost = amount * 5;
+      Cost = amount * 5;
       }
       else
       { 
         int freeLoaves = amount / 3;
         int extraLoaves = amount - (freeLoaves * 3);
-        cost = (freeLoaves * 10) + (extraLoaves * 5);
+        Cost = (freeLoaves * 10) + (extraLoaves * 5);
       }
-      return cost;
+      return Cost;
+    }
+
+    public void SetCost(int newCost)
+    {
+      Cost = newCost;
+    }
+
+    public int GetCost()
+    {
+      return Cost;
     }
   }
 
   public class Pastry
   {
-    public int PastryCost (int amount)
+    public int PastryCost(int amount)
     {
       int cost = 0;
       if (amount <= 3) 
