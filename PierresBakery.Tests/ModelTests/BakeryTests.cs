@@ -80,7 +80,7 @@ namespace PierresBakery.Tests
     public void PastryCost_FivePastries_Eight()
     {
       Pastry newPastry = new Pastry();
-      Assert.AreEqual(8, newPastry.PastryCost());
+      Assert.AreEqual(8, newPastry.PastryCost(5));
     }
   }
 }
